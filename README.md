@@ -1,24 +1,32 @@
-# README
+# Ruby on rails experiment
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is mostly me learning the framework on my daily commute!
 
-Things you may want to cover:
+## Setup 
+Run the docker-compose orcestration file to create the neccessary images and download all dependencies. 
 
-* Ruby version
+Create and run all containers:
+`
+docker-compose up -d --build
+`
 
-* System dependencies
+Create the databases: 
+`
+docker-compose run web rake db:create
+`
 
-* Configuration
 
-* Database creation
+## Testing
+To run all unit tests: 
+`
+docker-compose run web rails test
+`
 
-* Database initialization
+## Runing the application
+To run the application, it's as simple as running all containers!
 
-* How to run the test suite
+`
+docker-compose up -d --build
+`
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The application should now be visible at `http://localhost:3000/`
