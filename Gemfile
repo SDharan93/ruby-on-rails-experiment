@@ -34,6 +34,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'minitest', '~>5.10.3'
+  gem 'minitest-reporters',       '1.1.14'
 end
 
 group :development do
