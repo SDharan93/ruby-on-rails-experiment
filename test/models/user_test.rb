@@ -25,8 +25,18 @@ class UserTest < ActiveSupport::TestCase
 		assert_not(@user.valid?)
 	end
 
-	test 'email should not be larger than 255 characters' do
-		@user.email = 'a' * 256
+	test 'should allow 50 character names' do
+		@user.name = 'a' * 50
+		assert(@user.valid?)
+	end
+
+	test 'email should not be larger than 100 characters' do
+		@user.email = 'a' * 101
 		assert_not(@user.valid?)
+	end
+
+	test 'should allow 100 character emails' do 
+		@user.email = 'a' * 100
+		assert(@user.valid?)
 	end
 end
