@@ -1,0 +1,7 @@
+Style/RedundantReturn:
+  # When `true` allows code like `return x, y`.
+  AllowMultipleReturnValues: false
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
