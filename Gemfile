@@ -37,6 +37,7 @@ group :development, :test do
   gem 'minitest', '~>5.10.3'
   gem 'minitest-reporters',       '1.1.14'
   gem 'rails-controller-testing'
+  gem 'rubocop', '~> 0.57.1', require: false
 end
 
 group :development do
