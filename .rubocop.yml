@@ -1,3 +1,13 @@
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'tmp/**/*'
+    - 'log/**/*'
+    - '.idea/**/*'
+
+Metrics/LineLength:
+  Max: 100
+
 Style/RedundantReturn:
   # When `true` allows code like `return x, y`.
   AllowMultipleReturnValues: false
