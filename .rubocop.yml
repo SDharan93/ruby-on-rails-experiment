@@ -19,3 +19,6 @@ Style/GuardClause:
 
 Style/BracesAroundHashParameters:
   EnforcedStyle: braces
+
+Style/MethodDefParentheses:
+  EnforcedStyle: require_parentheses
