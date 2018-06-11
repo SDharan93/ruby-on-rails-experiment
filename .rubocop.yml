@@ -22,3 +22,6 @@ Style/BracesAroundHashParameters:
 
 Style/MethodDefParentheses:
   EnforcedStyle: require_parentheses
+
+Style/RedundantSelf:
+  Enabled: false
