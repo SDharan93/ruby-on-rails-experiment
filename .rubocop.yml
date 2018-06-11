@@ -16,3 +16,6 @@ Style/RedundantReturn:
 
 Style/GuardClause:
   Enabled: false
+
+Style/BracesAroundHashParameters:
+  EnforcedStyle: braces
