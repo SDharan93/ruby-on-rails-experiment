@@ -81,4 +81,18 @@ class UserTest < ActiveSupport::TestCase
     @user.save
     assert_equal(mixed_case_email.downcase, @user.reload.email)
   end
+
+  test 'password should exist' do
+    password = ' ' * 6
+    @user.password = password
+    @user.password_confirmation = password
+    assert_not(@user.valid?)
+  end
+
+  test 'password should be atleast 6 characters' do
+    password = 'a' * 5
+    @user.password = password
+    @user.password_confirmation = password
+    assert_not(@user.valid?)
+  end
 end
