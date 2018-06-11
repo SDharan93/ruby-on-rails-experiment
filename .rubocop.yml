@@ -5,6 +5,7 @@ AllCops:
     - 'log/**/*'
     - '.idea/**/*'
     - 'db/schema.rb'
+    - 'vendor/**/*'
 
 Metrics/LineLength:
   Max: 100
