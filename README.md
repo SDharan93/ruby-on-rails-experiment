@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/SDharan93/ruby-on-rails-experiment.svg?branch=master)](https://travis-ci.com/SDharan93/ruby-on-rails-experiment)
 # Ruby on rails experiment
 
 This project is mostly me learning the framework on my daily commute!
