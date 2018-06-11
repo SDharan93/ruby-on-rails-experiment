@@ -11,23 +11,19 @@ services:
   - docker
 
 before_install:
-  - docker-compose --version
+  # By default Travis CI has Postgres running, stop the service.
+  - sudo service postgresql stop
 
-  # Setup your application stack. You may need to tweak these commands if you
-  # doing out-of-the-ordinary docker-compose builds.
+  - docker-compose --version
   - docker-compose pull
   - docker-compose build
-
-  # You will want this for logging. If one of your containers does not build for
-  # whatever reason it's best to report that now before your tests start
-  # otherwise it can be really tricky to debug why tests are failing sometimes.
   - docker ps
 
-  # This is just our script to setup all the database tables and other fixtures
-  # we need. You should remove this if it's not necessary or you have other
-  # scripts handling this.
+  # Initialize the database.
   - docker-compose run web rake db:create
 
 script:
-  - rubocop
-  - docker-compose run web rake db:create
+  # Runs the lint check for the code
+  - docker-compose run web rubocop
+  # Runs all tests
+  - docker-compose run web rails test
